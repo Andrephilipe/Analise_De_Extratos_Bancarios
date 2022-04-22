@@ -7,8 +7,6 @@ import java.nio.file.Paths;
 import java.time.Month;
 import java.util.List;
 
-import javax.print.DocFlavor.STRING;
-
 public class BankStatementAnalizer {
     
     private static final String RESOURCES = "C:/Users/andre.p.cassiano/Java - Estudos da linguagem/desenvolvimento-real-de-software/analise_de_extratos_bancarios/Real-Word-Software-Development/drs/src/main/resources/";
