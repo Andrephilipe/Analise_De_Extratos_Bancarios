@@ -14,13 +14,13 @@ public class BankTransactionAnalizerSimple {
     private static final String RESOURCES = "C:/Users/andre.p.cassiano/Java - Estudos da linguagem/desenvolvimento-real-de-software/analise_de_extratos_bancarios/Real-Word-Software-Development/drs/src/main/resources/";
     public static void main(final String[] args) throws Exception {
         final BankStatementCVSParser bankStatementParser = new BankStatementCVSParser();
-        final String fileName = "banck-extract.csv";
+        final String fileName = "bank-data-simple.csv";
         final Path path = Paths.get(RESOURCES + fileName);
         final List<String> lines = Files.readAllLines(path);
 
         final List<BankTransaction> bankTransactions = bankStatementParser.parseLinesFromCSV(lines);
-        System.out.println("test" + calculateTotalAmount(bankTransactions));
-        System.out.println("test" + selectInMonth(bankTransactions, Month.JANUARY));
+        System.out.println("The total fo all transactions is " + calculateTotalAmount(bankTransactions));
+        System.out.println("Transactions in January " + selectInMonth(bankTransactions, Month.JANUARY));
 
     }
     public static double calculateTotalAmount(final List<BankTransaction> bankTransactions) {
