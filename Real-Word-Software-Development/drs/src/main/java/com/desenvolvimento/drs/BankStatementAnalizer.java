@@ -35,6 +35,7 @@ public class BankStatementAnalizer {
     }
 
     public void analyze(String string, BankStatementParser bankStatementParser2) {
+      // TODO document why this method is empty
     }
 
 }
