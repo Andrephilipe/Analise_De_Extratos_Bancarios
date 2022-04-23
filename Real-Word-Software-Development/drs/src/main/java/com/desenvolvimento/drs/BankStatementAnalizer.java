@@ -33,4 +33,8 @@ public class BankStatementAnalizer {
 
         System.out.println("The total salary received is " + bankStatementProcessor.calculateTotalForCategory("Salary"));
     }
+
+    public void analyze(String string, BankStatementParser bankStatementParser2) {
+    }
+
 }
