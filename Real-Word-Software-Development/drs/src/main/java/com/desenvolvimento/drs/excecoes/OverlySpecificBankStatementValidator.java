@@ -1,4 +1,4 @@
-package com.desenvolvimento.drs;
+package com.desenvolvimento.drs.excecoes;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;

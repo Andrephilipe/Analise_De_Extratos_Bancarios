@@ -1,6 +1,9 @@
-package com.desenvolvimento.drs;
+package com.desenvolvimento.drs.excecoes;
 
 import java.time.Month;
+
+import com.desenvolvimento.drs.BankTransaction;
+import com.desenvolvimento.drs.BankTransactionFilter;
 
 public class BankTransactionIsInFebruaryAndExpensive implements BankTransactionFilter {
 
