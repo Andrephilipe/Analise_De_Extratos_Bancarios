@@ -1,6 +1,7 @@
 package com.iteratrlearning.documentmanagementsystem;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -27,21 +28,21 @@ public class DocumentManagementSystem {
         if(separatorIndex != -1) {
 
             if(separatorIndex == path.length()) {
-                throw new UnknowFileTypeException("No extension foun for file: " + path);
+                throw new UnknownFileTypeException("No extension foun for file: " + path);
             }
 
             final String extension = path.substring(separatorIndex + 1);
             final Importer importer = extensionToImporter.get(extension);
 
             if(importer == null) {
-                throw new UnknowFileTypeException("For file: " + path);
+                throw new UnknownFileTypeException("For file: " + path);
             }
 
             final Document document = Importer.importFile(file);
             document.add(document);
         }
         else {
-            throw new UnknowFileTypeException("No extension found for file: " + path);
+            throw new UnknownFileTypeException("No extension found for file: " + path);
         }
 
     }
