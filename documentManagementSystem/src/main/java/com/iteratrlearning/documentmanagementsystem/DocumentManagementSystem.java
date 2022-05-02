@@ -47,12 +47,4 @@ public class DocumentManagementSystem {
 
     }
 
-    public List<Document> contents() {
-        return null;
-
-    }
-    public List<Document> search(final String query) {
-        return null;
-        
-    }
 }
