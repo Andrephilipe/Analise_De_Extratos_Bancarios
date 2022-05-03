@@ -1,5 +1,6 @@
 import com.acc.businessrulesengine.Action;
 import com.acc.businessrulesengine.BusinessRuleEngine;
+import com.acc.businessrulesengine.Facts;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,4 +32,16 @@ public class BusinessRuleEngineTest {
 
         verify(mockAction).perform();
     }
+    @Test
+    public void shouldPerformAnActionWithFacts() {
+        final Action mockAction = mock(Action.class);
+        final Facts mockFacts = mock(Facts.class);
+        final BusinessRuleEngine businessRuleEngine = new BusinessRuleEngine(mockedFacts);
+
+        businessRuleEngine.addAction(mockAction);
+        businessRuleEngine.run();
+
+        verify(mockAction).perform(mockAction);
+    }
+
 }
