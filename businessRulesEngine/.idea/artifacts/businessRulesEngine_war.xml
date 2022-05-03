@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="businessRulesEngine:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>businessRulesEngine</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="businessRulesEngine-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="businessRulesEngine:war exploded" />
+    </root>
+  </artifact>
+</component>
