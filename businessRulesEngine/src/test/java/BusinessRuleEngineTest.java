@@ -43,5 +43,4 @@ public class BusinessRuleEngineTest {
 
         verify(mockAction).perform(mockAction);
     }
-
 }
