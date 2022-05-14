@@ -14,5 +14,12 @@ public class TwootrTest {
                 TestData.USER_ID, "bad password", receiverEndPoint);
         assertFalse(endPoint.isPresent());
     }
+
+    @Test
+    public void shouldFollowValidUser(){
+        logon();
+        final FollowStatus followStatus = endPoint.onFollow(TestData.OTHER_USER_ID);
+
+        assertEquals(SUCCESS, followStatus);
+    }
 }
-'
