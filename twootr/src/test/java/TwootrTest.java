@@ -22,4 +22,14 @@ public class TwootrTest {
 
         assertEquals(SUCCESS, followStatus);
     }
+
+    @Test
+    public void shouldNotDuplicateFollowValidUser(){
+        logon();
+
+        endPoint.onFollow(TestData.OTHER_USER_ID);
+
+        final FollowStatus followStatus = endPoint.onFollow(TestData.OTHER_USER_ID);
+        assertEquals(SLREADY_FOLLOWING, followStatus);
+    }
 }
