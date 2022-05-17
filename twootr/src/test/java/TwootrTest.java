@@ -1,3 +1,4 @@
+import com.acc.twootr.ReceiverEndPoint;
 import com.acc.twootr.SenderEndPoint;
 import com.acc.twootr.Twoot;
 import org.junit.jupiter.api.Test;
